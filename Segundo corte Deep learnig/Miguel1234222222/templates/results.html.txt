@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Movie Classification: Results
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+ <link href="{{ url_for('static', filename='css/style.css') }}"rel="stylesheet" />
+</head>
+<body>
+ <div class="page-header">
+    <div class="container">
+      <div class="content-center brand">
+        <h1 class="h1" rel="tooltip">
+          Deep Learning
+          <br /> Movie Review Analysis
+        </h1>
+        <h3>Your movie review is:</h3>
+        <p class="text"> {{ content }} </p>
+        <br />
+        <h3 style="margin-bottom: 0">And it seems like it is a <span class="text-warning"> {{ prediction }} </span>
+          review with a likelihood of <span class="text-warning"> {{ probability }}%. </span></h3>
+        <br />
+        <form action="/thanks" method="post">
+          <input class="btn-success" type=submit value='The prediction was correct' name='feedback_button'>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input class="btn-danger" type=submit value='The prediction was incorrect' name='feedback_button'>
+          <input type=hidden value='{{ prediction }}' name='prediction'>
+          <input type=hidden value='{{ content }}' name='review'>
+        </form>
+        <br />
+        <a href="/" class="btn-mainbtn"> Skip training and try again </a>
+      </div>
+    </div>
+  </div>
+  <footer>
+<div class="footer-container">
+      <img src="/static/img/logo.png" alt="MDN" class= "img-logo">
+      <h2>Miguel Angel Carvajal Rodriguez</h2>
+      <h3 class="title">Deep Learning 2021</h3>
+
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        Movie Classification: Results
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wg"ht@100&display=swap" rel="stylesheet"> />
+     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+</head>
+
+<body class="index-page">
+    <div class="page-header">
+        <div class="container">
+            <div class="content-center brand">
+                <h1 class="h1" rel="tooltip">
+                    Deep Learning
+                    <br /> Movie Review Analysis
+                </h1>
+                <h3> Thank you for your feedback! </h3>
+                <a href="/" class="btn-mainbtn"> Analyze a new review </a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <img src="/static/img/logo.png" alt="MDN" class= "img-logo">
+                <h2>Miguel CARVAJAL</h2>
+                <h3 class="title">Deep Learning 2021</h3>
+
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

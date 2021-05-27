@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Movie Review Classifier | Form
+  </title>
+  <link  href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"/>
+ <link href="{{ url_for('static', filename='css/style.css') }} "rel="stylesheet"/>
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <h1 class="h1" rel="tooltip" title="Deep Learning 2021">
+        Deep Learning
+        <br /> Movie Review Analysis
+      </h1>
+      <img src="/static/img/peliculas.jpg" alt="MDN" class= "img-peliculas">
+      <h3>Please, enter your movie review in the box below:</h3>
+      {% from "_formhelpers.html" import render_field %}
+      <form action="/results" method="post">
+        <div>
+          {{ render_field(form.moviereview, class="txtb", cols='30', rows='10') }}
+        </div>
+        <button type="submit" class="btn-mainbtn"> Let's analyze it!</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+     <img src="/static/img/logo.png" alt="MDN" class= "img-logo">
+      <h2>MIguel Carvajal</h2>
+      <h3>Deep Learning 2021</h3>
+    </div>
+  </footer>
+</body>
